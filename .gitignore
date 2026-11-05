@@ -1,0 +1,13 @@
+# Skill zips built for ChatGPT upload (attach them to releases instead)
+*.zip
+
+# OS and editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Local Claude Code settings
+.claude/settings.local.json
+
+node_modules/
