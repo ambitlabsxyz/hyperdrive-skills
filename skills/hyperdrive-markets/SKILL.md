@@ -48,3 +48,7 @@ min(1000, (collateral * redemption_rate * liquidation_ltv) * 100 / debt)
 ```
 
 For any risk changes actions (ie, borrow, withdraw collateral) on a position, the health score is recalculated using the `ltv` instead of the `liquidation_ltv` and if it falls below 100, the action is denied.
+
+## Protocol Revenue
+
+Each market earns protocol revenue from a `fee` on the interest paid by borrowers. The fee is taken in the form of fee shares which accrue to the `feeRecipient` as lending deposits. To determine the current protocol revenue the `balanceOf(feeRecipient)` can be called to get the current fee shares and then converted to assets using `convertToAssets()`.
